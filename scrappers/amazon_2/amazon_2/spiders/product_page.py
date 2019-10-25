@@ -64,7 +64,6 @@ class ProductPageSpider(scrapy.Spider):
         for link in links:
             url = link[4]
             yield scrapy.Request(url=url, callback=self.parse, meta={'link': link})
-            break
 
 
     def get_review(self, response):
